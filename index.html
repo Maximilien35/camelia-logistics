@@ -18,15 +18,20 @@
 
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         .my-container {
             background: url('image/warehouse_09.jpg');
             background-repeat: no-repeat;
             background-size: contain;
             background-position: right;
-            filter: brightness(1);
+            /* filter: blur(5px); */
             background-color: rgb(255, 255, 255);
             border-radius: 10px;
-            height: 100vh;
+            height: 75vh;
+            line-height: normal;
         }
 
         .btn-light {
@@ -39,6 +44,12 @@
             background-color: #0056b3;
             border-color: #0056b3;
             color: white;
+
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
         }
 
         .btn-dark {
@@ -53,9 +64,9 @@
             font-family: poppins;
         }
 
-        .fw-bold {
+        /* .fw-bold {
             font-weight: bold;
-        }
+        } */
 
         .nav-item {
             font-size: 1.3em;
@@ -66,12 +77,19 @@
         .second {
             color: #243342;
             font-family: 'Montserrat', sans-serif;
-            font: 500;
             font-size: 1.3rem;
+            
+        }
+
+        .sub {
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font: 500;
+            font-size: 1.1rem;
         }
 
         .card-body {
-            background-color: rgb(255, 255, 255);
+            background-color:#e6f0ff;
             border: 1px solid #e6f0ff;
             border-radius: 10px;
             border-bottom: 2px solid #1e90ff;
@@ -117,21 +135,74 @@
 
         .section-title {
             position: relative;
-            font-size: 1.7em;
+            font-size: 1.9em;
             color: #007BFF;
             font-weight: bold;
             padding-bottom: 10px;
         }
 
-        /* .section-title::after {
-            content: '';
-            position: absolute;
+
+        .rotate-left {
+            transform: rotate(-2deg);
+
+        }
+
+        .rotate-slight {
+            transform: rotate(-1deg);
+        }
+
+        .rotate:hover {
+            cursor: pointer;
+            transform: scale(1.12);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .footer {
+
+            background-color: #f9f9f9;
+            margin-bottom: 0;
+            bottom: 0;
             width: 100%;
-            height: 2px;
-            background-color: #007BFF;
-            bottom: 20%;
-            left: 0% ;
-        } */
+
+        }
+
+        .footer .copyright {
+            padding: 20px 0;
+            border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+        }
+
+        .footer .copyright p {
+            margin-bottom: 0;
+        }
+
+        @media (max-width:768px) {
+
+            .rotate-left,
+            .rotate-right,
+            .rotate-slight {
+                transform: none;
+            }
+            .my-container{
+                background-image: none;
+                background-color:#e6f0ff;
+            }
+        }
+        .besoin{
+            font-size: 5rem;
+        }
+        @media(max-width:1024px){
+            .besoin{
+                font-size: 2rem;
+            }
+        }
+        .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 123, 255, 0.15);
+        }
     </style>
     <title>Accueil</title>
 </head>
@@ -141,7 +212,7 @@
     <header>
         <nav class="navbar navbar-expand-lg  p-4 ">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand fw-bold" style="color:#007bff;font-weight: bold"><span
+                <a href="index.html" class="navbar-brand fw-bold" style="color:#007bff;font-weight: bold"><span
                         class="h1">Camelia logistics</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#manav"
                     aria-expanded="false">
@@ -149,8 +220,8 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="manav">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
-                        <li class="nav-item"><a href="#" class="nav-link ">Comment ca marche</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link ">Services</a></li>
+                        <li class="nav-item"><a href="#how" class="nav-link ">Comment ca marche</a></li>
+                        <li class="nav-item"><a href="#services" class="nav-link ">Services</a></li>
                         <li class="nav-item"><a href="#" class="nav-link ">A propos</a></li>
                     </ul>
                 </div>
@@ -161,17 +232,18 @@
         </nav>
     </header>
 
-    <section
-        class="container-fluid  my-container py-5 d-flex bg-blur flex-column justify-content-center align-items-start"
+    <section class="container-fluid  my-container py-5 d-flex  flex-column justify-content-center align-items-start"
         data-aos="fade-up">
         <div>
-            <h1 class="fw-bold text-center md-text-white h1">Besoin de transporter?</h1>
-            <h1 class="text-center second fs-5">Trouvez un vehicules utilitaire en un clic partout au
-                cameroun</h1>
-            <div class="d-flex justify-content-center" data-aos="fade-right">
-                <button class="btn btn-dark m-3 p-2">telecharger l'application</button>
-                <button class="btn btn-light m-3 p-2">Comment ca marche?</button>
-            </div>
+            <h1 class="fw-bold text-left md-text-white  besoin">Besoin de transporter? <br> 
+                <h1 class="text-left text-secondary fst-italic text-muted h5">Trouvez un vehicules utilitaire
+                en un clic partout au
+                cameroun Marchandise colis,équipement...... <br>Choissisez le vehicule adapte et un
+                    chauffeur fiable partout ou vous vous trouvez</h1>
+                <div class="d-flex justify-content-start" data-aos="fade-right">
+                    <button class="btn btn-dark m-3 p-2">telecharger l'application</button>
+                    <button class="btn btn-light m-3 p-2"><a href="#how">Comment ca marche?</a> </button>
+                </div>
         </div>
 
     </section>
@@ -203,25 +275,54 @@
         </div>
     </section>
 
-    <section class="py-5">
+    <section class="py-5 my-5" id="how">
         <p class="section-title text-center mb-4">Comment ca marche</p>
         <div class="row mt-5 d-flex justify-content-around">
-            <div class="card-body p-4 m-4 col-md-6 col-lg-3" data-aos="fade-left">
+            <div class="card-body p-5 m-4 col-md-6 col-lg-3" data-aos="fade-left">
                 <span class="card-title prime h3">Etape 1</span>
                 <p class="card-text ">entrer vos besoins,indiquez votre ville,type de marchandise et la destination
                 </p>
             </div>
             <div class="card-body m-4 p-5 col-md-6 col-lg-3" data-aos="fade-up">
                 <span class="card-title h3 prime">Etape 2</span>
-                <p class="card-text ">Choissisez votre vehicule :tricycles,pick up ,ou camionette <br>
+                <p class="card-text ">Choissisez votre vehicule: tricycles,pick up ,ou camionette <br>
                     selectionner le type de vehicule qui correspondant a votre chargement</p>
             </div>
             <div class="card-body m-4 p-5 col-md-6 col-lg-3" data-aos="fade-right">
                 <span class="card-title prime h3">Etape 3</span>
-                <p class="card-text">possibilite de trouver des chauffeurs ,pres de chez vous selon vos
-                    criteres(prix,type de vehicule)</p>
+                <p class="card-text">Comparer et reserver les chauffeurs disponible pres de chez vous .Choissisez le
+                    prix ,le type de vehicule ou les avis </p>
+            </div>
+            <div class="card-body m-4 p-5 col-md-6 col-lg-3" data-aos="fade-right">
+                <span class="card-title prime h3">Etape 4</span>
+                <p class="card-text">Livraison rapide et securisee ,votre chauffeur arrive,vous suivez tout en temps
+                    reel jusqu'a la livraison</p>
             </div>
         </div>
+    </section>
+
+    <section class="container py-5 my-5 d-flex flex-column align-items-center" id="services">
+        <p class="section-title text-center mb-4">Nos services </p>
+
+        <div class="row-gx-5-gy-5" data-aos="fade-right">
+            <div class="col-lg-6 offset-lg-0 service-box rotate-left rotate bg-primary text-white p-4 rounded-4 shadow">
+                <h3 class="mb-3 fw-bold">Livraisons urbains et interurbains</h3>
+                <p class="sub">nous livrons ,d'un quartier a l'autre ou de Douala a Yaounde </p>
+            </div>
+            <div
+                class="col-lg-6 offset-lg-0 service-box rotate-left bg-info rotate text-white p-4 rounded-4 shadow">
+                <h3 class="mb-3 fw-bold">Demenagement</h3>
+                <p class="sub"> Nous vous aidons avec vos demenagement ,plus de soucis de transport ,nous sommes la </p>
+            </div>
+            <div
+                class="col-12 offset-lg-0 service-box rotate-slight bg-primary-subtle rotate text-dark p-4 rounded-4 shadow mt-4">
+                <h3 class="mb-3"></h3>
+
+                <p class="fw-bold">Disponible 7jr/7 ,partout au cameroun Notre reseau de chauffeurs est actifs dans les grandes villes
+                    comme dans les zones peripheriques</p>
+            </div>
+        </div>
+
     </section>
 
     <section>
@@ -249,7 +350,51 @@
         </div>
 
     </section>
-    <footer id="footer" class="footer  light-background">
+    <section class="container-fluid p-5 m-5" id="comment">
+        <h2 class="text-center section-title mb-5 fw-bold">Ce que les utilisateurs disent</h2>
+        <div class="row justify-content-center g-4">
+            <div class="col-md-5" data-aos="fade-up">
+                <div class="testimonial-card p-4 rounded-4 shadow bg-white border-start border-5 border-primary-subtle">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="#" alt="user1" class="rounded-circle me-3 border border-primary border-5">
+                        <div>
+                            <h5 class="mb-0">Melanie</h5>
+                            <small class="text-muted">vendeuse de vetements</small>
+                        </div>
+                    </div>
+                    <p class="fst-italic text-secondary">"j'ai pu envoyer mes stokws de akwa a bonaberie en mooins d'une
+                        heure.simple et rapide!"</p>
+                </div>
+            </div>
+            <div class="col-md-5" data-aos="fade-down">
+                <div class="testimonial-card p-4 rounded-4 shadow bg-light border-start border-5 border-primary-subtle">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="#" alt="user2" class="rouded-circle me-3 border border-info border-3">
+                        <div>
+                            <h5 class="mb-0">Alex tchoumi</h5>
+                            <small class="text-muted">Artisan</small>
+                        </div>
+                    </div>
+                    <p class="fst-italic text-secondary">"j'ai choisi le pick-up pour transporter mes materiaux a
+                        Bafoussam .Aucun Souci!"</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section>
+         <div class="container-fluid  my-3 pt-3 d-flex" style="height: 50vh;" >
+            <div class="col-md-6 m-3 d-flex align-items-center flex-column justify-content-center">
+                <p class="text-left md-text-white " style="font: 'Montserrat' ;font-size:1.3rem;"> Commander un vehicule depuis votre telephone en quelque clics <br>Disponible sur <span class="fw-bold">play-Store</span>  et <span class="fw-bold">App-Store</span> </p>
+                <button class="btn btn-light m-3 p-2">telecharger l'application</button>
+
+            </div>
+            <div class="col-6 m-1 " style="background-image: url(image/app.jpg);background-position: center;background-size: contain;background-repeat: no-repeat;">
+            </div>
+         </div>
+    </section>
+    <footer id="footer" class="footer mt-5 p-5 light-background">
 
         <div class="container pt-4 mt-3">
             <div class="row gy-3">
