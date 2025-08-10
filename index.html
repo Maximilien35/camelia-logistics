@@ -168,13 +168,18 @@
 
         .footer .copyright {
             padding: 20px 0;
-            border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+            border-top: 1px solid color-mix(in srgb, black, transparent 90%);
         }
 
         .footer .copyright p {
             margin-bottom: 0;
         }
 
+        .social-links a {
+            color: #007bff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
         @media (max-width:768px) {
 
             .rotate-left,
@@ -357,13 +362,14 @@
         </div>
 
     </section>
-    <section class="container-fluid p-5 m-5" id="comment">
+    <section class="container-fluid p-3" id="comment">
         <h2 class="text-center section-title mb-5 fw-bold">Ce que les utilisateurs disent</h2>
         <div class="row justify-content-center g-4">
             <div class="col-md-5" data-aos="fade-up">
                 <div class="testimonial-card p-4 rounded-4 shadow bg-white border-start border-5 border-primary-subtle">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="#" alt="user1" class="rounded-circle me-3 border border-primary border-5">
+                       
+                        <i class="rounded-circle me-3 border bi bi-person"></i> 
                         <div>
                             <h5 class="mb-0">Melanie</h5>
                             <small class="text-muted">Vendeuse de vetements</small>
@@ -376,7 +382,7 @@
             <div class="col-md-5" data-aos="fade-down">
                 <div class="testimonial-card p-4 rounded-4 shadow bg-light border-start border-5 border-primary-subtle">
                     <div class="d-flex align-items-center mb-3">
-                        <img src="#" alt="user2" class="rouded-circle me-3 border border-info border-3">
+                        <i class="rounded-circle me-3 border bi bi-person"></i> 
                         <div>
                             <h5 class="mb-0">Alex tchoumi</h5>
                             <small class="text-muted">Artisan</small>
