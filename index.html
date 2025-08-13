@@ -180,6 +180,7 @@
             font-size: 1.5rem;
             transition: color 0.3s ease;
         }
+
         @media (max-width:768px) {
 
             .rotate-left,
@@ -191,6 +192,11 @@
             .my-container {
                 background-image: none;
                 background-color: #e6f0ff;
+            }
+            .card-body:hover{
+                transform: none;
+                rotate: 0deg;
+                font-size: 1em;
             }
         }
 
@@ -222,7 +228,7 @@
         <nav class="navbar navbar-expand-lg  p-4 ">
             <div class="container-fluid">
                 <div class=" align-items-center">
-                    <img src="image/logo.jpg" alt="Logo" class="me-1" style="height: 50px;">
+                    <img src="image/logo.jpg" alt="Logo" class="me-1" style="height: 70px;">
                     <a href="index.html" class="navbar-brand fw-bold" style="color:#007bff;font-weight: bold"><span
                             class="h1">Camelia logistics</span></a>
                 </div>
@@ -234,7 +240,7 @@
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-4">
                         <li class="nav-item"><a href="#how" class="nav-link ">Comment ça marche</a></li>
                         <li class="nav-item"><a href="#services" class="nav-link ">Services</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link ">A propos</a></li>
+                        <li class="nav-item"><a href="#transport" class="nav-link ">A propos</a></li>
                     </ul>
                 </div>
 
@@ -253,14 +259,14 @@
                     adapté et un
                     chauffeur fiable partout où vous vous trouvez</h1>
                 <div class="d-flex justify-content-start" data-aos="fade-right">
-                    <button class="btn btn-dark m-3 p-2">Télécharger l'application</button>
+                    <button class="btn btn-dark m-3 p-2" onclick="comingSoon()">Télécharger l'application</button>
                     <button class="btn btn-light m-3 p-2"><a href="#how">Comment ça marche?</a> </button>
                 </div>
         </div>
 
     </section>
 
-    <section class="container-fluid my-5 py-4">
+    <section class="container-fluid my-5 py-4" id="transport">
         <div class="row py-5">
             <div class="col-lg-5 text-center  py-5 d-flex flex-column justify-content-center align-items-center"
                 data-aos="fade-left">
@@ -286,7 +292,29 @@
             </div>
         </div>
     </section>
+    <section class="container py-5 my-5 d-flex flex-column align-items-center" id="services">
+        <p class="section-title text-center mb-4">Nos services </p>
 
+        <div class="row-gx-5-gy-5" data-aos="fade-right">
+            <div class="col-lg-6 offset-lg-0 service-box rotate-left rotate bg-primary text-white p-4 rounded-4 shadow">
+                <h3 class="mb-3 fw-bold">Livraisons urbains et interurbains</h3>
+                <p class="sub">nous livrons,d'un quartier à l'autre ; de Douala a Yaounde et bien plus encore</p>
+            </div>
+            <div class="col-lg-6 offset-lg-0 service-box rotate-left bg-info rotate text-white p-4 rounded-4 shadow">
+                <h3 class="mb-3 fw-bold">Demenagement</h3>
+                <p class="sub"> Nous vous aidons avec vos demenagement,plus de soucis de transport ,nous sommes là </p>
+            </div>
+            <div
+                class="col-12 offset-lg-0 service-box rotate-slight bg-primary-subtle rotate text-dark p-4 rounded-4 shadow mt-4">
+                <h3 class="mb-3"></h3>
+
+                <p class="fw-bold">Disponible 7jr/7 ,partout au cameroun Notre reseau de chauffeurs est actif dans les
+                    grandes villes
+                    comme dans les zones peripheriques</p>
+            </div>
+        </div>
+
+    </section>
     <section class="py-5 my-5" id="how">
         <p class="section-title text-center mb-4">Comment ça marche</p>
         <div class="row mt-5 d-flex justify-content-around">
@@ -313,29 +341,7 @@
         </div>
     </section>
 
-    <section class="container py-5 my-5 d-flex flex-column align-items-center" id="services">
-        <p class="section-title text-center mb-4">Nos services </p>
 
-        <div class="row-gx-5-gy-5" data-aos="fade-right">
-            <div class="col-lg-6 offset-lg-0 service-box rotate-left rotate bg-primary text-white p-4 rounded-4 shadow">
-                <h3 class="mb-3 fw-bold">Livraisons urbains et interurbains</h3>
-                <p class="sub">nous livrons,d'un quartier à l'autre ; de Douala a Yaounde et bien plus encore</p>
-            </div>
-            <div class="col-lg-6 offset-lg-0 service-box rotate-left bg-info rotate text-white p-4 rounded-4 shadow">
-                <h3 class="mb-3 fw-bold">Demenagement</h3>
-                <p class="sub"> Nous vous aidons avec vos demenagement,plus de soucis de transport ,nous sommes là </p>
-            </div>
-            <div
-                class="col-12 offset-lg-0 service-box rotate-slight bg-primary-subtle rotate text-dark p-4 rounded-4 shadow mt-4">
-                <h3 class="mb-3"></h3>
-
-                <p class="fw-bold">Disponible 7jr/7 ,partout au cameroun Notre reseau de chauffeurs est actif dans les
-                    grandes villes
-                    comme dans les zones peripheriques</p>
-            </div>
-        </div>
-
-    </section>
 
     <section>
         <div class="row d-flex align-items-center justify-content-between py-5 m-5">
@@ -358,7 +364,7 @@
         <h1 class="fw-bold text-center">Transporter en toute sécurité</h1>
         <h1 class="second  text-center ">Notre equipe s'occupe de tout.Essayez </h1>
         <div class="d-flex justify-content-center" data-aos="fade-right">
-            <button class="btn btn-light m-3">commencer maintenant</button>
+            <button class="btn btn-light m-3"><a href="#how">commencer maintenant</a> </button>
         </div>
 
     </section>
@@ -368,8 +374,8 @@
             <div class="col-md-5" data-aos="fade-up">
                 <div class="testimonial-card p-4 rounded-4 shadow bg-white border-start border-5 border-primary-subtle">
                     <div class="d-flex align-items-center mb-3">
-                       
-                        <i class="rounded-circle me-3 border bi bi-person"></i> 
+
+                        <i class="rounded-circle me-3 border bi bi-person"></i>
                         <div>
                             <h5 class="mb-0">Melanie</h5>
                             <small class="text-muted">Vendeuse de vetements</small>
@@ -382,7 +388,7 @@
             <div class="col-md-5" data-aos="fade-down">
                 <div class="testimonial-card p-4 rounded-4 shadow bg-light border-start border-5 border-primary-subtle">
                     <div class="d-flex align-items-center mb-3">
-                        <i class="rounded-circle me-3 border bi bi-person"></i> 
+                        <i class="rounded-circle me-3 border bi bi-person"></i>
                         <div>
                             <h5 class="mb-0">Alex tchoumi</h5>
                             <small class="text-muted">Artisan</small>
@@ -400,9 +406,9 @@
         <div class="container-fluid  my-3 pt-3 d-flex" style="height: 50vh;" data-aos="zoom-in-out">
             <div class="col-md-6 m-3 d-flex align-items-center flex-column justify-content-center" data-aos="flip-left">
                 <p class="text-left md-text-white " style="font: 'Montserrat' ;font-size:1.3rem;"> Commander un vehicule
-                    depuis votre telephone en quelque clics <br>Disponible sur <span class="fw-bold">play-Store</span>
+                    depuis votre telephone en quelques clics <br>Disponible sur <span class="fw-bold">Play-Store</span>
                     et <span class="fw-bold">App-Store</span> </p>
-                <button class="btn btn-light m-3 p-2">Télécharger l'application</button>
+                <button class="btn btn-light m-3 p-2" onclick="comingSoon()">Télécharger l'application</button>
 
             </div>
             <div class="col-6 m-1 "
@@ -416,7 +422,7 @@
         <div class="container pt-4 mt-3">
             <div class="row gy-3">
                 <div class="col-lg-3 col-md-6 d-flex" data-aos="zoom-in">
-                    <i class="bi bi-geo-alt icon"></i>
+                    <i class="bi bi-geo-alt icon m-2"></i>
                     <div class="address">
                         <h4>Address</h4>
                         <p>Douala boko</p>
@@ -428,7 +434,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 d-flex" data-aos="zoom-out">
-                    <i class="bi bi-telephone icon"></i>
+                    <i class="bi bi-telephone icon m-2"></i>
                     <div>
                         <h4>Contact</h4>
                         <p>
@@ -439,7 +445,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-6 d-flex" data-aos="fade-up">
-                    <i class="bi bi-clock icon"></i>
+                    <i class="bi bi-clock icon m-2"></i>
                     <div>
                         <h4>Opening Hours</h4>
                         <p>
@@ -467,7 +473,7 @@
                     Reserved</span></p>
             <div class="credits">
 
-                Designed by <a href="#">Maximilien</a>
+                Designed by <a href="#" style="color: #0056b3;">Maximilien</a>
             </div>
         </div>
 
@@ -476,7 +482,11 @@
     <!-- <script src="js/bootstrap.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-
+    <script>
+        function comingSoon() {
+            alert("🚀 Disponible bientôt !");
+        }
+    </script>
     <script>
         AOS.init({
             duration: 1500,
