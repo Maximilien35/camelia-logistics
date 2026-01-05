@@ -82,6 +82,10 @@ h1, h2, h3, h4, h5 {
     gap: 8px;
 }
 
+.ms-auto .btn-primary {
+    color: white;
+}
+
 .btn-primary {
     background-color: var(--primary-blue);
     color: var(--white);
@@ -102,6 +106,7 @@ h1, h2, h3, h4, h5 {
 .btn-secondary:hover {
     background-color: var(--white);
     border-color: var(--primary-blue);
+    color:var(--primary-blue);
     transform: translateY(-2px);
 }
 
